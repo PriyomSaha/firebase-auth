@@ -39,12 +39,10 @@ import firebase from './firebase'
 export class App extends Component {
 
   handleClick = () => {
-    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-   
+    var recaptcha = new firebase.auth.RecaptchaVerifier('recaptcha');     
     var number = '';//+1 650-555-1234
 
-    var appVerifier = window.recaptchaVerifier;
-    firebase.auth().signInWithPhoneNumber(number, appVerifier).then(function (e) {
+    firebase.auth().signInWithPhoneNumber(number, recaptcha).then(function (e) {
       var code = prompt("enter tyhe code");//123456
 
 
