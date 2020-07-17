@@ -19,7 +19,7 @@ export const auth = firebase.auth();
 export const db = firebase.firestore();
 export const google_provider = new firebase.auth.GoogleAuthProvider();
 export const facebook_provider = new firebase.auth.FacebookAuthProvider();*/
-import firebase from 'firebase/app';
+import firebase from 'firebase';
 
 // Web app's Firebase configuration
 var firebaseConfig = {
